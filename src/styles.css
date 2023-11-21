@@ -1,0 +1,36 @@
+/* Add application styles & imports to this file! */
+body, input {
+  font: normal 400 16px/1 sans-serif;
+}
+
+body {
+  padding: 24px;
+}
+
+label {
+  display: block;
+  padding: 0 18px 4px;
+}
+
+input {
+  border: 1px solid lightgray;
+  border-radius: 18px;
+  margin-bottom: 24px;
+  outline: 0;
+  padding: 8px 16px;
+}
+
+input:focus {
+  border-color: steelblue;
+  box-shadow: 0 0 1px 1px steelblue;
+}
+
+input:read-only {
+  pointer-events: none;
+  color: gray;
+}
+
+.ng-touched.ng-invalid {
+  border-color: maroon;
+  box-shadow: 0 0 1px 1px maroon;
+}

@@ -1,0 +1,13 @@
+<app-input-text
+  readonly
+  placeholder="Name"
+  [(ngModel)]="name"
+></app-input-text>
+  
+<app-input-text-with-label
+  required
+  label="Name"
+  (onBlur)="log('blur')"
+  (onFocus)="log('focus')"
+  [(ngModel)]="name"
+></app-input-text-with-label>
