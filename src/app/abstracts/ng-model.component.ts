@@ -8,22 +8,23 @@ export class AbstractNgModelComponent<T = any> implements ControlValueAccessor {
   cid: string = uuid();
 
   @Input()
-  disabled: boolean;
+  disabled: boolean = false;
 
   @Input()
-  set value(value: T) {
+  set value(value: T | null) {
+    console.log(value)
     this._value = value;
     this.notifyValueChange();
   }
 
-  get value(): T {
+  get value(): T | null {
     return this._value;
   }
 
-  onChange: (value: T) => {};
-  onTouched: () => {};
+  onChange: (value: T |null) => {} = (value) => ({});
+  onTouched: () => {} = () => ({});
 
-  protected _value: T;
+  protected _value: T | null = null;
   protected cdRef: ChangeDetectorRef;
 
   constructor(public injector: Injector) {

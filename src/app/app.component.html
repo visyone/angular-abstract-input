@@ -1,11 +1,11 @@
 <app-input-text
-  readonly
+  [readonly]="true"
   placeholder="Name"
   [(ngModel)]="name"
 ></app-input-text>
   
 <app-input-text-with-label
-  required
+  [required]="true"
   label="Name"
   (onBlur)="log('blur')"
   (onFocus)="log('focus')"
